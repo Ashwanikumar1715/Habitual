@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { apiRoutes } from '../const/api-routes';
 import { messageForUser } from '../const/const';
 
-const BACKEND_URL_DEV = 'http://localhost:5000';
+const BACKEND_URL_DEV = 'https://habitual-api.onrender.com';
 const REQUEST_TIMEOUT = 10000;
 
 export const myApi = axios.create({

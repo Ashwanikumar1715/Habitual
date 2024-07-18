@@ -55,7 +55,7 @@
 
   & h1 {
     color: var(--white);
-    font-family: 'LilitaOne';
+    font-family: "LilitaOne";
     font-size: clamp(2.5vh, 2.5vw, 2.5vw);
     margin: 3vh;
   }
@@ -66,8 +66,8 @@
 
   & h2 {
     color: var(--gray);
-    font-family: 'LilitaOne';
-    font-size: clamp(1.5vh, 1.5vw, 1vw);
+    font-family: "LilitaOne";
+    font-size: clamp(2.5vh, 1.5vw, 1vw);
   }
 
   .page-explore__decoration {
@@ -81,7 +81,7 @@
   }
 
   .link--add {
-    font-size: clamp(1.3vh, 1.3vw, 0.8vw);
+    font-size: clamp(1.7vh, 1.3vw, 0.8vw);
     color: var(--light-blue);
   }
 

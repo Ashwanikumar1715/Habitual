@@ -1,13 +1,13 @@
-import './Days.css';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import dayjs from 'dayjs';
+import "./Days.css";
+import { useEffect } from "react";
+import { useState } from "react";
+import dayjs from "dayjs";
 
-import { myApi } from '../../service/api';
+import { myApi } from "../../service/api";
 
-import LoadingPage from '../../pages/LoadingPage/LoadingPage';
+import LoadingPage from "../../pages/LoadingPage/LoadingPage";
 
-import { AMOUNT_OF_DAYS, checkBoxesColors } from '../../const/const';
+import { AMOUNT_OF_DAYS, checkBoxesColors } from "../../const/const";
 
 function Days({
   habit,
@@ -23,13 +23,13 @@ function Days({
   const [checkboxesColorsData, setCheckboxesColorsData] =
     useState(checkboxesColors);
 
-  const firstDayOfHabit = dayjs(new Date(habit.start_day)).startOf('day');
+  const firstDayOfHabit = dayjs(new Date(habit.start_day)).startOf("day");
   const today = dayjs();
-  const lastDayOfHabit = firstDayOfHabit.add(AMOUNT_OF_DAYS - 1, 'day');
+  const lastDayOfHabit = firstDayOfHabit.add(AMOUNT_OF_DAYS - 1, "day");
 
   const checkIsTodayLastDayOfHabit = () => {
     const isLastDay = dayjs(lastDayOfHabit).isToday();
-    const isAfterLastDay = dayjs().isAfter(lastDayOfHabit, 'day');
+    const isAfterLastDay = dayjs().isAfter(lastDayOfHabit, "day");
 
     if (isLastDay || isAfterLastDay) {
       return true;
@@ -56,9 +56,9 @@ function Days({
 
   const setDaysData = (days) => {
     const allHabitDays = days.map((day) => {
-      const currentDayDate = dayjs(firstDayOfHabit).add(day, 'd').toDate();
+      const currentDayDate = dayjs(firstDayOfHabit).add(day, "d").toDate();
       const alreadyExistedCheckin = checkins.find((checkin) =>
-        dayjs(currentDayDate).isSame(dayjs(checkin.date), 'day')
+        dayjs(currentDayDate).isSame(dayjs(checkin.date), "day")
       );
 
       let dataColor,
@@ -89,7 +89,7 @@ function Days({
       const oneHabitDay = {};
 
       oneHabitDay.number = day + 1;
-      oneHabitDay.dayId = 'day' + (day + 1);
+      oneHabitDay.dayId = "day" + (day + 1);
       oneHabitDay.date = checkinDate;
       oneHabitDay.isChecked = isInputChecked;
       oneHabitDay.checkin_id = checkinId;
@@ -154,8 +154,8 @@ function Days({
             >
               <label>
                 {dayjs(habitDay.date).isToday()
-                  ? 'Today'
-                  : 'Day ' + habitDay.number}
+                  ? "Today"
+                  : "Day " + habitDay.number}
 
                 <input
                   type="checkbox"

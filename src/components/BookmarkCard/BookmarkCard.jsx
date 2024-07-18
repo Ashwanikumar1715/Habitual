@@ -1,5 +1,5 @@
-import { myApi } from '../../service/api';
-import './BookmarkCard.css';
+import { myApi } from "../../service/api";
+import "./BookmarkCard.css";
 
 function BookmarkCard({ habit, onFetchBookmarks, onFetchMyHabits }) {
   const { emoji, title, type, description, category, _id } = habit;
@@ -39,7 +39,7 @@ function BookmarkCard({ habit, onFetchBookmarks, onFetchMyHabits }) {
         <button className="btn btn--delete" onClick={() => deleteBookmark()}>
           <span>
             <svg
-              style={{ width: '2vh' }}
+              style={{ width: "2vh" }}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

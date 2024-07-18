@@ -1,11 +1,11 @@
-import './FilterItem.css';
+import "./FilterItem.css";
 
 function FilterItem({ title, onChangeFilter, currentFilter }) {
   const handleFilterChange = (event) => {
     const filter = event.target.name;
 
-    if (filter === 'reset filter') {
-      onChangeFilter('');
+    if (filter === "reset filter") {
+      onChangeFilter("");
     } else {
       onChangeFilter(filter);
     }

@@ -1,7 +1,7 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-import { authorizationStatus, messageForUser } from '../../const/const';
-import { myApi } from '../../service/api';
+import { createContext, useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import { authorizationStatus, messageForUser } from "../../const/const";
+import { myApi } from "../../service/api";
 
 const AuthContext = createContext();
 
@@ -15,7 +15,7 @@ function AuthContentWrapper({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
   const authenticateUser = async () => {
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem("authToken");
 
     if (!token) {
       setUser(null);
